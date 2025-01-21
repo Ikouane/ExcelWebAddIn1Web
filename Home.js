@@ -63,7 +63,7 @@
                 // 找到要突出显示的单元格
                 for (let i = 0; i < sourceRange.rowCount; i++) {
                     for (let j = 0; j < sourceRange.columnCount; j++) {
-                        if (!isNaN(sourceRange.values[i][j]) && sourceRange.values[i][j] < highestValue) {
+                        if (sourceRange.values[i][j] != "" && !isNaN(sourceRange.values[i][j]) && sourceRange.values[i][j] < highestValue) {
                             highestRow = i;
                             highestCol = j;
                             highestValue = sourceRange.values[i][j];
